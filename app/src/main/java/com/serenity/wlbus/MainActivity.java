@@ -1,8 +1,10 @@
 package com.serenity.wlbus;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.serenity.wlbus.bus.Subscribe;
 import com.serenity.wlbus.bus.WLBus;
@@ -44,5 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
         //退出app的时候，进行资源释放
         WLBus.getDefault().release();
+    }
+
+    public void clickTextView(View view) {
+        startActivity(new Intent(this,SecondActivity.class));
     }
 }

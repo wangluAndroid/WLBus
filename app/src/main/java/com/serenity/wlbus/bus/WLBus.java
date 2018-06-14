@@ -21,7 +21,15 @@ public class WLBus {
      * key:Class  value:为被Subscribe注解的函数对象
      */
     private Map<Class, List<SubscribeMehtodObject>> METHOD_CACHE = new HashMap<>();
+
+    /**
+     * 执行表
+     */
     private Map<String, List<ExecuteObj>> EXECUTE = new HashMap<>();
+
+    /**
+     * 注销表
+     */
     private Map<Class, List<String>> UNREGISTER = new HashMap<>();
 
 
