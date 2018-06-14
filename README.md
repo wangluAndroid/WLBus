@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         WLBus.getDefault().register(this);
 
         //发送消息
+        //给标签为'2'的发送消息，发送的参数为"wanglu"，2
         WLBus.getDefault().post("2","wanglu",2);
     }
 
