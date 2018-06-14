@@ -8,7 +8,6 @@
 
 #### 二、具体使用
 ```
-  
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -51,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
  ```
  
 #### 三、具体逻辑流程图
+
+![WLBus实现逻辑图.png](https://raw.githubusercontent.com/wangluAndroid/WLBus/master/image/WLBus思路图.png)
 
  
 
