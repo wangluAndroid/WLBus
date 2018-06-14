@@ -15,9 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //注册WLBus
         WLBus.getDefault().register(this);
 
-
+        //发送消息
         WLBus.getDefault().post("2","wanglu",2);
     }
 
@@ -32,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe({"1"})
     public void test2(String name ,String type) {
         Log.e(TAG, "---------test2-------name-->"+name+"----type---->"+type);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //进行反注册
+        WLBus.getDefault().unRegister(this);
+
+        //退出app的时候，进行资源释放
+        WLBus.getDefault().release();
     }
 }
